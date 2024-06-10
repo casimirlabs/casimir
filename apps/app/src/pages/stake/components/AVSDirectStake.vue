@@ -26,7 +26,9 @@ import StakeCard from "./StakeCard.vue"
 const { selectedAVS, selectAVS } = useAVSSelection()
 // const { user } = useUser()
 // const { convertString, formatEthersCasimir, formatDecimalString } = useFormat()
-// TODO: @Chris change value attribute if neeeded once we get the payload and know what the values are called
+
+// TODO: @ccali11 - change value attribute if needed once we get the payload and know what the values are called
+// TODO: @ccali11 - pull images of each AVS and Operator (look for API for this)
 const columns = [
     { title: "AVS", show: ref(true), value: "AVSName" }, 
     { title: "Token", show: ref(true), value: "AVSToken" }, 
@@ -115,6 +117,7 @@ watch(searchInputValue, () =>{
     console.log("Filter through the AVS Here")
 })
 
+// TODO: @ccali11 - Replace this with the actual AVS data
 const AVSData = ref(null)
 const filteredAVS = computed(() =>{
     const data = sortAVSData()
@@ -189,7 +192,7 @@ const getRandomValue = (column) => {
     }
 }
 
-// Method to generate an array of mocked items
+// TODO: @ccali11 - Find out where to pull AVS data from and implement it in a composable file
 const generateMockedItems = (columns, numItems = 10) => {
     const items = []
 

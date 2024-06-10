@@ -160,6 +160,7 @@ export default function useStakingState() {
         return result
     }
     
+    // TODO: @ccali11 - Add AVS selection payload to deposit function (from avsSelection.ts composable)
     async function deposit({ amount, walletProvider, type, pathIndex }: { amount: string, walletProvider: ProviderString, type: "default" | "eigen", pathIndex: number | undefined}) {
         let toastContent = {
             id: stakingToastId.value as string,
